@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(236, 233, 228);
+    text-decoration: none;
+}
+h1{
+    font-family: 'Playball', cursive;
+    background-color: rgb(120, 196, 197);
+}
+h1 a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(120, 196, 197);
+    font-size: 40px;
+}
+h1 :hover{
+    color: rgb(218, 188, 19);
+}
+#inicio{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+#tl1{
+    font-size: 78px;
+    background: none;
+    color:  rgb(120, 196, 197);
+    font-family: 'Playball', cursive;
+    position: absolute;
+    text-shadow: -4px 3px 0 black,-5px 4px 0 rgb(218, 188, 19) ;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#box1{
+    width: 100%;
+    margin: auto;
+    height: 55px;
+    background-color: rgb(120, 196, 197);
+}
+#box2{
+    width: 25%;
+    float: left;
+    padding-left: 10px;
+    background-color: brgb(120, 196, 197);
+
+}
+#box3{
+    /* border: 1px solid fuchsia;   */
+    float: left;
+    margin-left: 48%;
+    padding-top: 5px;
+    background-color: rgb(120, 196, 197);
+}
+#menu{
+    background-color: rgb(120, 196, 197);
+}
+
+#menu li{
+    float: left;
+    display: inline;
+}
+#menu li a{
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 3px 5px;
+    background-color: rgb(120, 196, 197);
+    color: white;
+}
+
+#menu li a:hover {
+    font-weight: 700;
+    margin-top: -2;
+    padding-bottom: 12px;
+    color: rgb(187, 167, 54);
+}
+#box4{
+    display:block;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#pregal{
+    text-align: center;
+    font-family: 'Playball', cursive;
+    color: aliceblue;
+    font-size: 50px;
+    margin: 2%;
+}
+#fotos{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+table {
+    margin: auto;
+    width: 70%;
+
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid rgb(187, 167, 54);
+    object-fit: cover;
+ }
+ #block{
+     margin: auto;
+ }
+ 
