@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background-image: url(../img/bcck2.jpg);
+
+}
+h1 :hover{
+    color: rgb(176, 140, 224);
+}
+#menu li a:hover {
+    font-weight: 700;
+    padding-bottom: 12px;
+    color: rgb(176, 140, 224);
+}
+h2{
+    font-size: 40px;
+    font-family: 'Roboto';
+    margin-top: 10%;
+}
+#contenedor{
+    margin: auto;
+    width: 100%;
+}
+#boximg{
+    float: left;
+    margin-top: 3%;
+    margin-left: 5%;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    
+}
+#boxdescrip{
+    color: rgb(120, 196, 197);
+    float: left;
+    font-family: 'Roboto';
+    font-size: 22px;
+    margin-left: 5%;
+    text-align: center;
+}
+#btnpedir{
+    margin-top: 20px;
+}
+#btnpedir a{
+    text-align: center;
+    
+    border-radius: 5px;
+    background-color: rgb(120, 196, 197);
+    color: aliceblue;
+    padding: 1% 4%;
+    text-decoration: none;
+
+}
+#btnpedir :hover{
+    background-color:rgb(80, 172, 173);
+}
