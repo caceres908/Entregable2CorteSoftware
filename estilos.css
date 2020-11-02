@@ -98,6 +98,7 @@ h1 :hover{
     float: right;
     margin-right: 5%;
     background-color: rgb(120, 196, 197);
+    margin-top: -45px;
 }
 #menu1{
     background-color: rgb(120, 196, 197);
@@ -327,15 +328,17 @@ footer{
     margin: 0;
     box-sizing: border-box;
     font-family: arial;
+    
 }
 
 
 
 #input-search{
-    width: 300px;
-    height: 40px;
+    width: 200px;
+    height: 35px;
     font-size: 20px;
     text-indent: 10px;
+    border-radius: 10px;
 }
 
 .content-search{
@@ -378,7 +381,10 @@ tbody tr td a:hover{
     display: none;
 }
 
-
+.Buscador{
+    margin-top: -35px;
+    margin-left: 70%;
+}
 
 
 
