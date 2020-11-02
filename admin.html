@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="" method="POST">
+    <form action="/cgi-bin/ProyectoSoftwareBack/admin.py" method="POST">
         <table>
             <tr>
                 <th>Nombre</th>
@@ -25,7 +25,9 @@
                 <th>{{datos.Phone}}</th>
                 <th>{{datos.Address}}</th>                     
             </tr>
+            {%endfor%}
         </table>
+        <button type="submit" class="submit-btn">Mostar</button>
     </form>
 </body>
 
