@@ -17,15 +17,13 @@
                 <th>Phone Number</th>
                 <th>Address</th>
             </tr>
-            {%for datos in info%}
             <tr>
-                <th>{{datos.Nombre}}</th>
-                <th>{{datos.Correo}}</th>
-                <th>{{datos.Password}}}</th>
-                <th>{{datos.Phone}}</th>
-                <th>{{datos.Address}}</th>                     
+                <th>{{nom}}</th>
+                <th>{{correo}}</th>
+                <th>{{passw}}}</th>
+                <th>{{phone}}</th>
+                <th>{{add}}</th>                     
             </tr>
-            {%endfor%}
         </table>
         <button type="submit" class="submit-btn">Mostar</button>
     </form>
