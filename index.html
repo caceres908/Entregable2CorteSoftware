@@ -10,15 +10,16 @@
     <title>Flee</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700|Playball&display=swap" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
 
     <div id="box1">
         <input type="checkbox" id="btn-menu">
-        <label for="btn-menu" id="logomenu"><img id="logomenu"
-                src="img/menu.png"
-                width="25px" height="25px"></label>
+        <label for="btn-menu" id="logomenu"><img id="logomenu" src="img/menu.png" width="25px" height="25px"></label>
         <nav class="menu">
             <ul>
                 <li id=inciso><a href="index.html">Inicio</a></li>
@@ -27,7 +28,93 @@
                 <li><a href="otros.html">Otros</a></li>
             </ul>
         </nav>
+        <nav class="Buscador">
+            <input type="search" id="input-search" placeholder="Buscar aqui">
+
+            <div class="content-search">
+                <div class="content-table">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a href="#">Candongas grandes en forma de estrella</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Aretes largos dorados</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Borlas grandes de colores</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Topos corazón</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Aretes largos</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Candongas con perlas</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Collar en forma de triangulo</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Collar en forma de circular</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Collar y aretes en forma de pajaro</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Collar y aretes en forma de corazón</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Collar de ojo en forma de mano</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">Collar y aretes en forma de ojos</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Anillos dorados</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Hebillas para el pelo</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Anillos plateados para falanges</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Pulseras de piedritas variadas</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Manillas para compartir</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Manilla con piedras de jade</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        <script src="js/search.js"></script>
         <div id="box3">
+            
             <ul id="menu1">
                 <a id="icono" href="Carrito.html"><img id="icono" src="https://www.gameblackmarket.com/images/cart.png"
                         width="30px" height="30px"></td></a>
@@ -37,6 +124,7 @@
             </ul>
         </div>
     </div>
+    
 
 
     <div id="inicio">
@@ -63,62 +151,64 @@
         </p>
         <br /><br /><br /><br /><br /><br /><br />
     </div>
-    <footer >
-       
+    <footer>
+
         <div class="container-footer-all">
-         
-             <div  class="container-body">
- 
-                 
- 
-                 <div class="colum2">
- 
-                     <h1>Redes Sociales</h1>
- 
-                     <div class="row">
-                        <a id="p" href="https://www.facebook.com/flee.accesorios"><img src="img/facebook1.png" width= "15px" height= "25px"></a>
-                         <label>Siguenos en Facebook</label>
-                     </div>
-                     <div class="row">
-                        <a id="p" href="https://www.instagram.com/flee.bog/?igshid=1pa7ong3ph40d"><img src="img/instagram.png" width= "24px" height= "25px"></a>
-                         <label>Siguenos en Instagram</label>
-                     </div>
- 
- 
-                 </div>
- 
-                 <div class="colum3">
- 
-                     <h1>Informacion Contactos</h1>
- 
-                     <div class="row2">
-                         <img src="img/telefono.png" width= "25px" height= "25px">
-                         <label>+57-3016468043</label>
-                     </div>
- 
-                     <div  class="row2">
-                          <img src="img/correo.png" width= "30px" height= "22px">
-                          <label>flee.bogota@gmail.com</label>
-                     </div>
- 
-                 </div>
- 
-             </div>
-         
-         </div>
-         
-         <div class="container-footer">
-                <div class="footer">
-                     <div class="copyright">
-                         © 2020 Todos los Derechos Reservados | <a id="p" href="">Flee</a>
-                     </div>
- 
-                     
-                 </div>
- 
-             </div>
-         
-     </footer>
+
+            <div class="container-body">
+
+
+
+                <div class="colum2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+                        <a id="p" href="https://www.facebook.com/flee.accesorios"><img src="img/facebook1.png"
+                                width="15px" height="25px"></a>
+                        <label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <a id="p" href="https://www.instagram.com/flee.bog/?igshid=1pa7ong3ph40d"><img
+                                src="img/instagram.png" width="24px" height="25px"></a>
+                        <label>Siguenos en Instagram</label>
+                    </div>
+
+
+                </div>
+
+                <div class="colum3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="row2">
+                        <img src="img/telefono.png" width="25px" height="25px">
+                        <label>+57-3016468043</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="img/correo.png" width="30px" height="22px">
+                        <label>flee.bogota@gmail.com</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2020 Todos los Derechos Reservados | <a id="p" href="">Flee</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
 </body>
 
 
