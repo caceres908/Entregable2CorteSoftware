@@ -13,3 +13,14 @@ $(document).ready(function(){
 	});
 });
 
+
+function f (){
+	$.ajax({
+		url: "/cgi-bin/ProyectoSoftwareBack/admin.py",
+		Type:'GET',
+		dataType:'JSON',
+		success: function(rta){
+			console.log(rta);
+		}
+	});
+}
