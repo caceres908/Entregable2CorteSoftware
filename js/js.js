@@ -18,7 +18,7 @@ function f (){
 	$.ajax({
 		url: "/cgi-bin/ProyectoSoftwareBack/admin.py",
 		Type:'GET',
-		dataType:'JSON',
+		dataType:'json',
 		success: function(rta){
 			console.log(rta);
 		}
