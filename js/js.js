@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 function f (){
 	$.ajax({
-		url: "/cgi-bin/ProyectoSoftwareBack/admin.py",
+		url: "http://localhost:5000/productosM",
 		Type:'GET',
 		dataType:'json',
 		success: function(rta){
