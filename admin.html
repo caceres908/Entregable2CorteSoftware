@@ -10,30 +10,30 @@
 </head>
 
 <body>
-    <form action="/cgi-bin/ProyectoSoftwareBack/admin.py" method="POST">
+    <div id="app">
         <table>
             <tr>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Password</th>
-                <th>Phone Number</th>
-                <th>Address</th>
-                <th></th>
+                <td>Nombre</td>
+                <td>Correo</td>
+                <td>Password</td>
+                <td>Phone Number</td>
+                <td>Address</td>
+                <td></td>
             </tr>
-            <tr>
-                <th>{{nom}}</th>
-                <th>{{correo}}</th>
-                <th>{{passw}}}</th>
-                <th>{{phone}}</th>
-                <th>{{add}}</th>
-                <th> 
+            <tr v-for='u in datos'>
+                <td>{{u.Nombre}}</td>
+                <td>{{u.Email}}</td>
+                <td>{{u.Password}}}</td>
+                <td>{{u.Telefono}}</td>
+                <td>{{u.Direccion}</td>
+                <td> 
                     <button type="submit">Eliminar</button>
                     <button type="submit">Modificar</button>
-                </th>                     
+                </td>                     
             </tr>
         </table>
+    </div>
         <button type="submit" class="submit-btn">Mostar</button>
-    </form>
     <script src="js/admin.js"></script>
 </body>
 
