@@ -4,32 +4,52 @@ var losdatos = []
 var app = new Vue({
     el: '#app',
     data: {
-        datos: losdatos
-
+        datos: losdatos,
+        nom: '',
+        corre: '',
+        con: '',
+        tel: '',
+        dire: ''
     },
     created: function () {
         this.f();
     },
     methods: {
         f: function () {
-            axios.get(url+'/productosM')
+            axios.get(url + '/usuarioG')
                 .then(response => {
                     this.datos = response.data.results;
-                    console.log('Get list users', this.datos)
+                    console.log('Get list users', this.datos);
                 })
                 .catch(error => console.error(error));
         },
-        detalle: function (u) {
-            document.body.innerHTML = "";
-            axios.get('https://reqres.in/api/users/' + u.id)
-                .then(response => {
-                    const da = response.data.data;
-                    console.log(`GET list users`, da);
-                    document.body.innerHTML = "<div id='c1'>" + "Id: " + da.id + "<br>" +
-                        "Nombre: " + da.first_name + "<br>" + "Apellido: " + da.last_name + "<br>"
-                        + "Email: " + da.email + "<br>" + "<a href='EjercicosAxios.html' id='c2'>Inicio</a>" + "</div>";
+        crear: function () {
+            document.getElementById('table').innerHTML="";
+            path = url + '/usuarioC';
+            const data = {
+                nombre: this.nom,
+                correo: this.corre,
+                con: this.con,
+                tel: this.tel,
+                dire: this.dire
+            }
+            axios.post(path, data)
+                .then(() => {
+                    this.getBooks();
                 })
-                .catch(error => console.error(error));
+                .catch((error) => {
+                    // eslint-disable-next-line
+                    console.log(error);
+                    this.getBooks();
+                });
+            this.clear();
+        },
+        clear: function () {
+            this.nom = '';
+            this.corr = '';
+            this.con = '';
+            this.tel = '';
+            this.dire = '';
         }
     }
 })

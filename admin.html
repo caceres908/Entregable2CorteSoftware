@@ -11,7 +11,7 @@
 
 <body>
     <div id="app">
-        <table>
+        <table id= "table">
             <tr>
                 <td>Nombre</td>
                 <td>Correo</td>
@@ -32,6 +32,14 @@
                 </td>                     
             </tr>
         </table>
+        <div id >
+            Nombre: <input type="text" v-model="nom" />
+            Correo: <input type="text" v-model="corre" />
+            Contraseña: <input type="password" v-model="con">
+            Telefono: <input type="text" v-model="tel" />
+            Direccion: <input type="text" v-model="dire" />
+           <button v-on:click="crear">Aceptar</button>
+        </div>
     </div>
         <button type="submit" class="submit-btn">Mostar</button>
     <script src="js/admin.js"></script>
