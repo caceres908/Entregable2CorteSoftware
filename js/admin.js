@@ -1,9 +1,10 @@
 url = 'http://ec2-54-237-79-168.compute-1.amazonaws.com:5000';
+var losdatos = []
 
 var app = new Vue({
     el: '#app',
     data: {
-        datos: null
+        datos: losdatos
 
     },
     created: function () {
@@ -13,7 +14,7 @@ var app = new Vue({
         f: function () {
             axios.get(url+'/productosM')
                 .then(response => {
-                    this.datos = response.data.data;
+                    this.datos = response.data.results;
                     console.log('Get list users', this.datos)
                 })
                 .catch(error => console.error(error));
