@@ -46,7 +46,7 @@ var app = new Vue({
         },
         clear: function () {
             this.nom = '';
-            this.corr = '';
+            this.corre = '';
             this.con = '';
             this.tel = '';
             this.dire = '';
