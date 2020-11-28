@@ -35,12 +35,12 @@ var app = new Vue({
             };
             axios.post(path, data)
                 .then(() => {
-                    this.getBooks();
+                    this.f();
                 })
                 .catch((error) => {
                     // eslint-disable-next-line
                     console.log(error);
-                    this.getBooks();
+                    this.f();
                 });
             this.clear();
         },
