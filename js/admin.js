@@ -32,7 +32,7 @@ var app = new Vue({
                 con: this.con,
                 tel: this.tel,
                 dire: this.dire
-            }
+            };
             axios.post(path, data)
                 .then(() => {
                     this.getBooks();
