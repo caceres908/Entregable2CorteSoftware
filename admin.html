@@ -13,6 +13,7 @@
     <div id="app">
         <table id= "table">
             <tr>
+                <td>Id</td>
                 <td>Nombre</td>
                 <td>Correo</td>
                 <td>Password</td>
@@ -21,6 +22,7 @@
                 <td></td>
             </tr>
             <tr v-for='u in datos'>
+                <td>{{u.Id}}</td>
                 <td>{{u.Nombre}}</td>
                 <td>{{u.Email}}</td>
                 <td>{{u.password}}</td>
