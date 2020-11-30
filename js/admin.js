@@ -1,6 +1,8 @@
 url = 'http://ec2-34-232-92-62.compute-1.amazonaws.com:5000';
 var losdatos = []
 
+// Usuarios
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -79,7 +81,7 @@ var app = new Vue({
             document.getElementById('d1').innerHTML = "";
             document.getElementById('d2').innerHTML = "";
             path = url + '/usuariob';
-            axios.delete(path, { headers:{},data:{correo: this.corre}})
+            axios.delete(path, { headers: {}, data: { correo: this.corre } })
                 .then((response) => {
                     console.log(response)
                     this.f();
@@ -91,5 +93,27 @@ var app = new Vue({
                 });
             this.clear();
         }
+    }
+})
+
+// Productos
+
+var Productos = []
+
+var app2 = new vue({
+    el: '#app2',
+    data: {
+        productos: Productos
+    },
+    created: function () {
+        this.get_datos();
+    },
+    get_datos: function () {
+        axios.get(url + '/productosG')
+            .then(response => {
+                this.productos = response.data.results;
+                console.log('Get list Products', this.productos);
+            })
+            .catch(error => console.error(error));
     }
 })
