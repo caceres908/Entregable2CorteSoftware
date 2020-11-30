@@ -100,7 +100,7 @@ var app = new Vue({
 
 var pro = []
 
-var app2 = new vue({
+var app2 = new Vue({
     el: '#app2',
     data: {
         productos: pro
