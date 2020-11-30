@@ -24,7 +24,7 @@ var app = new Vue({
                 .catch(error => console.error(error));
         },
         crear: function () {
-            document.getElementById('table').innerHTML="";
+            document.getElementById('table').innerHTML = "";
             path = url + '/usuarioC';
             const data = {
                 nombre: this.nom,
@@ -51,7 +51,7 @@ var app = new Vue({
             this.tel = '';
             this.dire = '';
         },
-        actu: function(){
+        actu: function () {
             document.getElementById('table').innerHTML = "";
             document.getElementById('d1').innerHTML = "";
             document.getElementById('d3').innerHTML = "";
@@ -74,12 +74,21 @@ var app = new Vue({
                 });
             this.clear();
         },
-        eli: function(){
+        eli: function () {
             document.getElementById('table').innerHTML = "";
             document.getElementById('d1').innerHTML = "";
             document.getElementById('d2').innerHTML = "";
-            path = url + '/usuarioB';
-            axios.delete(path, { correo: this.corre });
+            path = url + '/usuariob';
+            axios.delete(path, { headers:{},data:{correo: this.corre}})
+                .then((response) => {
+                    console.log(response)
+                    this.f();
+                })
+                .catch((error) => {
+                    // eslint-disable-next-line
+                    console.log(error.request);
+                    this.f();
+                });
             this.clear();
         }
     }
