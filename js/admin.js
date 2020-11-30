@@ -98,12 +98,12 @@ var app = new Vue({
 
 // Productos
 
-var Productos = []
+var pro = []
 
 var app2 = new vue({
     el: '#app2',
     data: {
-        productos: Productos
+        productos: pro
     },
     created: function () {
         this.get_datos();
