@@ -1,4 +1,4 @@
-url = 'http://ec2-54-237-79-168.compute-1.amazonaws.com:5000';
+url = 'http://ec2-34-232-92-62.compute-1.amazonaws.com:5000';
 var losdatos = []
 
 var app = new Vue({
@@ -50,6 +50,37 @@ var app = new Vue({
             this.con = '';
             this.tel = '';
             this.dire = '';
+        },
+        actu: function(){
+            document.getElementById('table').innerHTML = "";
+            document.getElementById('d1').innerHTML = "";
+            document.getElementById('d3').innerHTML = "";
+            path = url + '/usuariop';
+            const data = {
+                nombre: this.nom,
+                correo: this.corre,
+                con: this.con,
+                tel: this.tel,
+                dire: this.dire
+            };
+            axios.put(path, data)
+                .then(() => {
+                    this.f();
+                })
+                .catch((error) => {
+                    // eslint-disable-next-line
+                    console.log(error);
+                    this.f();
+                });
+            this.clear();
+        },
+        eli: function(){
+            document.getElementById('table').innerHTML = "";
+            document.getElementById('d1').innerHTML = "";
+            document.getElementById('d2').innerHTML = "";
+            path = url + '/usuarioB';
+            axios.delete(path, { correo: this.corre });
+            this.clear();
         }
     }
 })

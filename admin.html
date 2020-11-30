@@ -34,13 +34,25 @@
                 </td>                     
             </tr>
         </table>
-        <div id >
+        <div id="d1">
             Nombre: <input type="text" v-model="nom" />
             Correo: <input type="text" v-model="corre" />
             Contraseña: <input type="password" v-model="con"/>
             Telefono: <input type="text" v-model="tel" />
             Direccion: <input type="text" v-model="dire" />
            <button v-on:click="crear">Aceptar</button>
+        </div>
+        <div id="d2"> 
+            Nombre: <input type="text" v-model="nom" />
+            Correo: <input type="text" v-model="corre" />
+            Contraseña: <input type="password" v-model="con"/>
+            Telefono: <input type="text" v-model="tel" />
+            Direccion: <input type="text" v-model="dire" />
+           <button v-on:click="actu">Actulizar</button>
+        </div>
+        <div id="d3">
+            Correo: <input type="text" v-model="corre" />
+            <button v-on:click="eli">Eliminar</button>
         </div>
     </div>
         <button type="submit" class="submit-btn">Mostar</button>
