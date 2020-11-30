@@ -108,12 +108,15 @@ var app2 = new Vue({
     created: function () {
         this.get_datos();
     },
-    get_datos: function () {
-        axios.get(url + '/productosG')
-            .then(response => {
-                this.productos = response.data.results;
-                console.log('Get list Products', this.productos);
-            })
-            .catch(error => console.error(error));
+    methods: {
+        get_datos: function () {
+            axios.get(url + '/productosG')
+                .then(response => {
+                    this.productos = response.data.results;
+                    console.log('Get list Products', this.productos);
+                })
+                .catch(error => console.error(error));
+        }
     }
+
 })
