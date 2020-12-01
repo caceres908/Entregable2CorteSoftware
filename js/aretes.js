@@ -1,11 +1,13 @@
 url = 'http://ec2-34-232-92-62.compute-1.amazonaws.com:5000';
 
 var pro = []
+var arete = []
 
 var app = new Vue({
     el: '#app',
     data: {
         productos: pro,
+        producto: arete
     },
     created: function () {
         this.get_datos();
@@ -23,10 +25,9 @@ var app = new Vue({
             document.getElementById('box4').innerHTML = "";
             document.getElementById('pregal').innerHTML = "";
             document.getElementById('inicio').innerHTML = ""; 
-            console.log(u[0].Codigo)
             axios.get(url +'/Arete/'+u.Codigo)
                 .then(response => {
-                    const da = response.data.results;
+                    this.producto = response.data.results;
                     console.log('Get list Products', da);
                     document.getElementById('box4').innerHTML = "<div>" + "Nombre: "
                         + da.Nombre + "<br>" + "Descripcion: " + da.Descripcion + "<br>" +
