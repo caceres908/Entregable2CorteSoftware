@@ -28,10 +28,10 @@ var app = new Vue({
             axios.get(url +'/Arete/'+u.Codigo)
                 .then(response => {
                     this.producto = response.data.results;
-                    console.log('Get list Products', da);
+                    console.log('Get list Products', this.producto);
                     document.getElementById('box4').innerHTML = "<div>" + "Nombre: "
-                        + da.Nombre + "<br>" + "Descripcion: " + da.Descripcion + "<br>" +
-                        "<img src= '" + da.Imagen + "'>" + "<br>" + "Precio: " + da.Precio +
+                        + this.producto.Nombre + "<br>" + "Descripcion: " + this.producto.Descripcion + "<br>" +
+                        "<img src= '" + this.producto.Imagen + "'>" + "<br>" + "Precio: " + this.producto.Precio +
                         "</div>";
                 })
                 .catch(error => console.error(error));
