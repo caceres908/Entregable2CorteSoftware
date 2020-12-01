@@ -22,14 +22,12 @@ var app = new Vue({
                 .catch(error => console.error(error));
         },
         arete_unico: function (u) {
-            document.getElementById('box4').innerHTML = "";
-            document.getElementById('pregal').innerHTML = "";
-            document.getElementById('inicio').innerHTML = ""; 
+            document.getElementById('caja1').innerHTML = "";
             axios.get(url +'/Arete/'+u.Codigo)
                 .then(response => {
                     this.producto = response.data.results;
                     console.log('Get list Products', this.producto);
-                    document.getElementById('box4').innerHTML = "<div>" + "Nombre: "
+                    document.getElementById('caja1').innerHTML = "<div>" + "Nombre: "
                         + this.producto.Nombre + "<br>" + "Descripcion: " + this.producto.Descripcion + "<br>" +
                         "<img src= '" + this.producto.Imagen + "'>" + "<br>" + "Precio: " + this.producto.Precio +
                         "</div>";
