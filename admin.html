@@ -30,6 +30,26 @@
     </div>
 
     <div id="app">
+        <div id="formularioadmin">
+            <div id="d1">
+                <div id="boxForm">
+                Nombre: <input type="text" v-model="nom" />
+                Correo: <input type="text" v-model="corre" />
+                Contraseña: <input type="password" v-model="con" />
+                Telefono: <input type="text" v-model="tel" />
+                Direccion: <input type="text" v-model="dire" />
+            </div>
+                <button v-on:click="crear">Crear</button>
+            </div>
+            <div id="d2">
+                Nombre: <input type="text" v-model="nom" />
+                Correo: <input type="text" v-model="corre" />
+                Contraseña: <input type="password" v-model="con" />
+                Telefono: <input type="text" v-model="tel" />
+                Direccion: <input type="text" v-model="dire" />
+                <button v-on:click="actu">Actualizar</button>
+            </div>
+        </div>
         <div id="main-container-admin">
             <table id="table">
                 <thead id="theadadmin">
@@ -60,22 +80,7 @@
                 </tr>
             </table>
         </div>
-        <div id="d1">
-            Nombre: <input type="text" v-model="nom" />
-            Correo: <input type="text" v-model="corre" />
-            Contraseña: <input type="password" v-model="con" />
-            Telefono: <input type="text" v-model="tel" />
-            Direccion: <input type="text" v-model="dire" />
-            <button v-on:click="crear">Crear</button>
-        </div>
-        <div id="d2">
-            Nombre: <input type="text" v-model="nom" />
-            Correo: <input type="text" v-model="corre" />
-            Contraseña: <input type="password" v-model="con" />
-            Telefono: <input type="text" v-model="tel" />
-            Direccion: <input type="text" v-model="dire" />
-            <button v-on:click="actu">Actualizar</button>
-        </div>
+        
         <div id="d3">
             Correo: <input type="text" v-model="corre" />
             <button v-on:click="eli">Eliminar</button>

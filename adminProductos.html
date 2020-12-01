@@ -32,6 +32,22 @@
    
 
     <div id="app2">
+        <div id="formularioadmin2">
+            <div id="d4">
+                <div id="boxForm">
+                Nombre: <input type="text" v-model="nom" id="textadmin" /><br>
+                Descripcion: <input type="text" v-model="des" id="textadmin"/><br>
+                Precio: <input type="text" v-model="pre" id="textadmin"/><br>
+                Imagen: <input type="text" v-model="img" id="textadmin"/><br>
+                Categoria: <input type="text" v-model="cat" id="textadmin"/><br>
+            </div>
+                <button v-on:click="crear_producto" id="boton">Crear</button><br>
+            </div>
+            
+            <div id="d5">
+                <button v-on:click="update_products" id="boton">Actualizar</button>
+            </div>
+        </div>
         <div id="main-container-admin2">
             <table id="table2">
                 <thead id="theadadmin">
@@ -53,24 +69,13 @@
                     <td id="tdadmin"><img :src="u.Imagen" width="80px" height="80px"></td>
                     <td id="tdadmin">{{u.Categoria}}</td>
                     <td id="tdadmin">
-                        
-                        <a id="boton" href="crearProducto.html">Crear</a>
-                        <a id="boton" href="modificarProducto.html">Modificar</a>
-                        <a id="boton" href="eliminarProducto.html">Eliminar</a>
+                        <a id="boton" >Eliminar</a>
                         
                     </td>
                 </tr>
             </table>
         </div>
         
-        <div id="d5">
-            Nombre: <input type="text" v-model="nom" />
-            Descripcion: <input type="text" v-model="des" />
-            Precio: <input type="text" v-model="pre" />
-            Imagen: <input type="text" v-model="img" />
-            Categoria: <input type="text" v-model="cat" />
-            <button v-on:click="update_products">Actualizar</button>
-        </div>
         <div id="6">
             Nombre: <input type="text" v-model="nom" />
             <button v-on:click="delete_products">Eliminar</button>
