@@ -1,11 +1,9 @@
-*{
+body{
     margin: 0;
     padding: 0;
     background-color: rgb(236, 233, 228);
     text-decoration: none;
 }
-
-
 
 
 #btn-menu{
@@ -32,7 +30,7 @@ header label{
 .menu li a{
     display: block;
     padding: 15px 20px;
-    color: rgb(120, 196, 197);
+    color: white;
     text-decoration: none;
     font-family: 'Pacifico', cursive;
     font-size: 20px;
@@ -69,25 +67,13 @@ h1 a {
     background-color: rgb(120, 196, 197);
     font-size: 40px;
 }
-h1 :hover{
-    color: rgb(218, 188, 19);
-}
+
 #inicio{
     display: inline-block;
     width: 100%;
 }
 
-#tl1{
-    font-size: 78px;
-    background: none;
-    color:  rgb(120, 196, 197);
-    font-family: 'Playball', cursive;
-    position: absolute;
-    text-shadow: -4px 3px 0 black,-5px 4px 0 rgb(218, 188, 19) ;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 #box1{
     width: 100%;
     height: 55px;
@@ -119,12 +105,7 @@ h1 :hover{
     color: white;
 }
 
-#menu li a:hover {
-    font-weight: 700;
-    margin-top: -2;
-    padding-bottom: 12px;
-    color: rgb(187, 167, 54);
-}
+
 #box4{
     display:block;
     color: rgb(255, 255, 255);
@@ -140,18 +121,7 @@ h1 :hover{
     margin: 2%;
 }
 
-table {
-    margin: auto;
-    width: 70%;
 
- }
-th, td {
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid rgb(187, 167, 54);
-    object-fit: cover;
-}
 
 #fotos{
     margin-left: 6.5%;
@@ -233,6 +203,7 @@ footer{
     margin-top: 20px;
     display: flex;
     background: rgb(120, 196, 197);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .row img{
@@ -261,6 +232,7 @@ footer{
     margin-top: 20px;
     display: flex;
     background: rgb(120, 196, 197);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .row2 img{
@@ -308,21 +280,7 @@ footer{
     background: rgb(120, 196, 197)
 }
 
-@media screen and (max-width: 1100px){
-    
-    .container-body{
-        flex-wrap: wrap;
-    }
-    
-    .colum1{
-        max-width: 100%;
-    }
-    
-    .colum2,
-    .colum3{
-        margin-top: 40px;
-    }
-}
+
 *{
     padding: 0;
     margin: 0;
@@ -333,56 +291,81 @@ footer{
 
 
 
-#input-search{
-    width: 200px;
-    height: 35px;
-    font-size: 20px;
-    text-indent: 10px;
-    border-radius: 10px;
-}
 
-.content-search{
+
+
+#main-container{
+    margin: 50px auto;
+    width:600px;
+}
+#table{
+    background-color:rgb(232, 246, 248);
+    text-align: left;
+    border-collapse: collapse;
     width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    background: rgba(0,0,0,0.3);
-    display: none;
-    position: absolute
 }
-
-.content-table{
-    width: 80%;
-    max-height: 200px;
-    height: auto;
-    background: rgba(0,0,0,0.3);
-    margin-left: 10px;
-    overflow-y: visible;
-    overflow-x: hidden;
-}
-
-.content-table table{
+#table2{
+    background-color:rgb(232, 246, 248);
+    text-align: left;
+    border-collapse: collapse;
     width: 100%;
 }
 
-tbody tr td a{
-    display: block;
-    padding: 10px;
-    color:rgb(120, 196, 197);
+#theadadmin{
+    background-color: #2d636d;
+    border-bottom: solid 5px  rgb(51, 161, 180);
+    color: white;
+}
+#tdadmin{
+    padding:10px;  
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+}
+#thadmin{
+    padding:10px;  
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+tr:nth-child(even){
+    background-color:rgb(204, 237, 243) ;
+}
+#main-container-admin{
+    margin-top: 50px;
+    background-color:rgb(120, 196, 197); 
+    border: none;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-family: 'Playball', cursive;
+    margin-left: 20%;
+    margin-bottom: 50px;
+}
+#main-container-admin2{
+    margin-top: 50px;
+    background-color:rgb(120, 196, 197); 
+    border: none;
+    color: black;;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-bottom: 50px;
+}
+#boton{
+    background-color: rgb(51, 161, 180); 
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-tbody tr td a:hover{
-    background: rgba(0,0,0,0.3);
-}
 
-#table_length, #table_filter, #table_info, #table_paginate{
-    display: none;
-}
-
-.Buscador{
-    margin-top: -35px;
-    margin-left: 70%;
-}
-
+ 

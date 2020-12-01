@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700|Playball&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/cssadmin.css" />
-    <title>Clientes</title>
+    <title>Productos</title>
 </head>
 
 <body>
@@ -29,60 +29,52 @@
 
     </div>
 
-    <div id="app">
-        <div id="main-container-admin">
-            <table id="table">
+   
+
+    <div id="app2">
+        <div id="main-container-admin2">
+            <table id="table2">
                 <thead id="theadadmin">
-                    <tr>
-                        <th id="thadmin">ID</th>
-                        <th id="thadmin">NOMBRE</th>
-                        <th id="thadmin">CORREO</th>
-                        <th id="thadmin">CONTRASEÑA</th>
-                        <th id="thadmin">TELÉFONO</th>
-                        <th id="thadmin">DIRECCIÓN</th>
-                        <th id="thadmin"></th>
-                    </tr>
-                </thead>
-                <tr v-for='u in datos'>
-                    <td id="tdadmin">{{u.Id}}</td>
+                <tr>
+                    <th id="thadmin">CÓDIGO</th>
+                    <th id="thadmin">NOMBRE</th>
+                    <th id="thadmin">DESCRIPCIÓN</th>
+                    <th id="thadmin">PRECIO</th>
+                    <th id="thadmin">IMAGEN</th>
+                    <th id="thadmin">CATEGORÍA</th>
+                    <th id="thadmin"></th>
+                </tr>
+            </thead>
+                <tr v-for='u in productos'>
+                    <td id="tdadmin">{{u.Codigo}}</td>
                     <td id="tdadmin">{{u.Nombre}}</td>
-                    <td id="tdadmin">{{u.Email}}</td>
-                    <td id="tdadmin">{{u.password}}</td>
-                    <td id="tdadmin">{{u.Telefono}}</td>
-                    <td id="tdadmin">{{u.Direccion}}</td>
+                    <td id="tdadmin">{{u.Descripcion}}</td>
+                    <td id="tdadmin">{{u.Precio}}</td>
+                    <td id="tdadmin"><img :src="u.Imagen" width="80px" height="80px"></td>
+                    <td id="tdadmin">{{u.Categoria}}</td>
                     <td id="tdadmin">
                         
-                        <a id="boton" href="crearCliente.html">Crear</a>
-                        <a id="boton" href="modificarCliente.html">Modificar</a>
-                        <a id="boton" href="eliminarCliente.html">Eliminar</a>
+                        <a id="boton" href="crearProducto.html">Crear</a>
+                        <a id="boton" href="modificarProducto.html">Modificar</a>
+                        <a id="boton" href="eliminarProducto.html">Eliminar</a>
                         
                     </td>
                 </tr>
             </table>
         </div>
-        <div id="d1">
+        
+        <div id="d5">
             Nombre: <input type="text" v-model="nom" />
-            Correo: <input type="text" v-model="corre" />
-            Contraseña: <input type="password" v-model="con" />
-            Telefono: <input type="text" v-model="tel" />
-            Direccion: <input type="text" v-model="dire" />
-            <button v-on:click="crear">Crear</button>
+            Descripcion: <input type="text" v-model="des" />
+            Precio: <input type="text" v-model="pre" />
+            Imagen: <input type="text" v-model="img" />
+            Categoria: <input type="text" v-model="cat" />
+            <button v-on:click="update_products">Actualizar</button>
         </div>
-        <div id="d2">
+        <div id="6">
             Nombre: <input type="text" v-model="nom" />
-            Correo: <input type="text" v-model="corre" />
-            Contraseña: <input type="password" v-model="con" />
-            Telefono: <input type="text" v-model="tel" />
-            Direccion: <input type="text" v-model="dire" />
-            <button v-on:click="actu">Actualizar</button>
+            <button v-on:click="delete_products">Eliminar</button>
         </div>
-        <div id="d3">
-            Correo: <input type="text" v-model="corre" />
-            <button v-on:click="eli">Eliminar</button>
-        </div>
-    </div>
-
-    
     </div>
     <script src="js/admin.js"></script>
     <footer>
