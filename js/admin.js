@@ -169,6 +169,21 @@ var app2 = new Vue({
                     this.get_datos();
                 })
             this.clear_products();
+        },
+        delete_products: function () {
+            document.getElementById('table2').innerHTML = "";
+            document.getElementById('d4').innerHTML = "";
+            document.getElementById('d5').innerHTML = "";
+            path = url + '/productosD';
+            axios.delete(path, { headers: {}, data: { nombre: this.nom } })
+                .then(() => {
+                    this.get_datos();
+                })
+                .catch((error) => {
+                    console.log(error)
+                    this.get_datos();
+                })
+            this.clear_products();
         }
     }
 
