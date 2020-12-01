@@ -21,7 +21,7 @@ var app = new Vue({
         },
         arete_unico: function (u) {
             document.getElementById('caja1').innerHTML = "";
-            axios.get(url + '/Aretes/' + u.Codigo)
+            axios.get(url +'/Aretes/'+u.Codigo)
                 .then(response => {
                     const da = response.data.results;
                     console.log('Get list Products', da);
