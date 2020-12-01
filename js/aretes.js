@@ -23,6 +23,7 @@ var app = new Vue({
             document.getElementById('box4').innerHTML = "";
             document.getElementById('pregal').innerHTML = "";
             document.getElementById('inicio').innerHTML = ""; 
+            console.log(u.data.Codigo)
             axios.get(url +'/Arete/'+u.Codigo)
                 .then(response => {
                     const da = response.data.results;
