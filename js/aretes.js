@@ -23,8 +23,7 @@ var app = new Vue({
             document.getElementById('box4').innerHTML = "";
             document.getElementById('pregal').innerHTML = "";
             document.getElementById('inicio').innerHTML = ""; 
-            const da2 = u.data.results;
-            axios.get(url +'/Arete/'+da2.Codigo)
+            axios.get(url +'/Arete/'+u.Codigo)
                 .then(response => {
                     const da = response.data.results;
                     console.log('Get list Products', da);
