@@ -148,6 +148,27 @@ var app2 = new Vue({
             this.pre = '';
             this.img = '';
             this.cat = '';
+        },
+        update_products: function () {
+            document.getElementById('table2').innerHTML = "";
+            document.getElementById('d4').innerHTML = "";
+            path = url + '/productosA';
+            const data = {
+                nombre: this.nom,
+                descripcion: this.des,
+                precio: this.pre,
+                imagen: this.img,
+                categoria: this.cat
+            };
+            axios.put(path, data)
+                .then(() => {
+                    this.get_datos();
+                })
+                .catch((error) => {
+                    console.log(error)
+                    this.get_datos();
+                })
+            this.clear_products();
         }
     }
 
