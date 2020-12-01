@@ -20,7 +20,9 @@ var app = new Vue({
                 .catch(error => console.error(error));
         },
         arete_unico: function (u) {
-            document.getElementById('caja1').innerHTML = "";
+            document.getElementById('box4').innerHTML = "";
+            document.getElementById('pregal').innerHTML = "";
+            document.getElementById('inicio').innerHTML = ""; 
             axios.get(url +'/Arete/'+u.Codigo)
                 .then(response => {
                     const da = response.data.results;
