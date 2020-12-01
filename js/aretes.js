@@ -5,14 +5,14 @@ var pro = []
 var app = new Vue({
     el: '#app',
     data: {
-        productos: pro
+        productos: pro,
     },
     created: function () {
         this.get_datos();
     },
-    methos: {
+    methods: {
         get_datos: function () {
-            axios.get(url + '/Aretes')
+            axios.get(url + '/productosG')
                 .then(response => {
                     this.productos = response.data.results;
                     console.log('Get list Products', this.productos);
