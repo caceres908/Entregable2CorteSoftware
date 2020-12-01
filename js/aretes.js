@@ -19,11 +19,16 @@ var app = new Vue({
                 })
                 .catch(error => console.error(error));
         },
-        arete_unico: function(u){
-            axios.get(url + '/Aretes/'+u.Codigo)
+        arete_unico: function (u) {
+            document.getElementById('caja1').innerHTML = "";
+            axios.get(url + '/Aretes/' + u.Codigo)
                 .then(response => {
-                    this.productos = response.data.results;
-                    console.log('Get list Products', this.productos);
+                    const da = response.data.results;
+                    console.log('Get list Products', da);
+                    document.getElementById('caja1').innerHTML = "<div>" + "Nombre: "
+                        + da.Nombre + "<br>" + "Descripcion: " + da.Descripcion + "<br>" +
+                        "<img src= '" + da.Imagen + "'>" + "<br>" + "Precio: " + da.Precio +
+                        "</div>";
                 })
                 .catch(error => console.error(error));
         }
