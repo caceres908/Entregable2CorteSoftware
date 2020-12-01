@@ -33,21 +33,19 @@
         <div id="formularioadmin">
             <div id="d1">
                 <div id="boxForm">
-                Nombre: <input type="text" v-model="nom" />
-                Correo: <input type="text" v-model="corre" />
-                Contraseña: <input type="password" v-model="con" />
-                Telefono: <input type="text" v-model="tel" />
-                Direccion: <input type="text" v-model="dire" />
+                Nombre: <input type="text" v-model="nom" id="textadmin"><br>
+                Correo: <input type="text" v-model="corre" id="textadmin"/><br>
+                Contraseña: <input type="password" v-model="con" id="textadmin"/><br>
+                Telefono: <input type="text" v-model="tel" id="textadmin"/><br>
+                Direccion: <input type="text" v-model="dire" id="textadmin"/><br>
             </div>
-                <button v-on:click="crear">Crear</button>
+                <button v-on:click="crear" id="boton2">Crear</button>
             </div>
             <div id="d2">
-                Nombre: <input type="text" v-model="nom" />
-                Correo: <input type="text" v-model="corre" />
-                Contraseña: <input type="password" v-model="con" />
-                Telefono: <input type="text" v-model="tel" />
-                Direccion: <input type="text" v-model="dire" />
-                <button v-on:click="actu">Actualizar</button>
+                <button v-on:click="actu" id="boton2">Actualizar</button>
+            </div>
+            <div id="d3">
+                <button v-on:click="eli" id="boton2">Eliminar</button>
             </div>
         </div>
         <div id="main-container-admin">
@@ -60,7 +58,7 @@
                         <th id="thadmin">CONTRASEÑA</th>
                         <th id="thadmin">TELÉFONO</th>
                         <th id="thadmin">DIRECCIÓN</th>
-                        <th id="thadmin"></th>
+                        
                     </tr>
                 </thead>
                 <tr v-for='u in datos'>
@@ -70,21 +68,12 @@
                     <td id="tdadmin">{{u.password}}</td>
                     <td id="tdadmin">{{u.Telefono}}</td>
                     <td id="tdadmin">{{u.Direccion}}</td>
-                    <td id="tdadmin">
-                        
-                        <a id="boton" href="crearCliente.html">Crear</a>
-                        <a id="boton" href="modificarCliente.html">Modificar</a>
-                        <a id="boton" href="eliminarCliente.html">Eliminar</a>
-                        
-                    </td>
+                    
                 </tr>
             </table>
         </div>
         
-        <div id="d3">
-            Correo: <input type="text" v-model="corre" />
-            <button v-on:click="eli">Eliminar</button>
-        </div>
+        
     </div>
 
     

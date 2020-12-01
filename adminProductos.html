@@ -41,11 +41,14 @@
                 Imagen: <input type="text" v-model="img" id="textadmin"/><br>
                 Categoria: <input type="text" v-model="cat" id="textadmin"/><br>
             </div>
-                <button v-on:click="crear_producto" id="boton">Crear</button><br>
+                <button v-on:click="crear_producto" id="boton2">Crear</button>
             </div>
             
             <div id="d5">
-                <button v-on:click="update_products" id="boton">Actualizar</button>
+                <button v-on:click="update_products" id="boton2">Actualizar</button>
+            </div>
+            <div id="6">
+                <button v-on:click="delete_products"  id="boton2">Eliminar</button>
             </div>
         </div>
         <div id="main-container-admin2">
@@ -58,7 +61,7 @@
                     <th id="thadmin">PRECIO</th>
                     <th id="thadmin">IMAGEN</th>
                     <th id="thadmin">CATEGORÍA</th>
-                    <th id="thadmin"></th>
+                    
                 </tr>
             </thead>
                 <tr v-for='u in productos'>
@@ -68,18 +71,12 @@
                     <td id="tdadmin">{{u.Precio}}</td>
                     <td id="tdadmin"><img :src="u.Imagen" width="80px" height="80px"></td>
                     <td id="tdadmin">{{u.Categoria}}</td>
-                    <td id="tdadmin">
-                        <a id="boton" >Eliminar</a>
-                        
-                    </td>
+                    
                 </tr>
             </table>
         </div>
         
-        <div id="6">
-            Nombre: <input type="text" v-model="nom" />
-            <button v-on:click="delete_products">Eliminar</button>
-        </div>
+        
     </div>
     <script src="js/admin.js"></script>
     <footer>
