@@ -12,7 +12,7 @@ var app = new Vue({
     },
     methods: {
         get_datos: function () {
-            axios.get(url + '/productosG')
+            axios.get(url + '/Aretes')
                 .then(response => {
                     this.productos = response.data.results;
                     console.log('Get list Products', this.productos);
