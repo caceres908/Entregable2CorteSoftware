@@ -1,9 +1,5 @@
 url = 'http://ec2-34-232-92-62.compute-1.amazonaws.com:5000';
 
-$('.special.cards .image').dimmer({
-    on: 'hover'
-});
-
 var pro = []
 
 var app = new Vue({
