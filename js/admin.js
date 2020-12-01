@@ -103,7 +103,12 @@ var pro = []
 var app2 = new Vue({
     el: '#app2',
     data: {
-        productos: pro
+        productos: pro,
+        nom: '',
+        des: '',
+        pre: '',
+        img: '',
+        cat: ''
     },
     created: function () {
         this.get_datos();
@@ -116,6 +121,33 @@ var app2 = new Vue({
                     console.log('Get list Products', this.productos);
                 })
                 .catch(error => console.error(error));
+        },
+        crear_producto: function () {
+            document.getElementById('table2').innerHTML = "";
+            path = url + '/productosP';
+            const data = {
+                nombre: this.nom,
+                descripcion: this.des,
+                precio: this.pre,
+                imagen: this.img,
+                categoria: this.cat
+            };
+            axios.post(path, data)
+                .then(() => {
+                    this.get_datos();
+                })
+                .catch((error) => {
+                    console.log(error)
+                    this.get_datos();
+                })
+            this.clear_products();
+        },
+        clear_products: function () {
+            this.nom = '';
+            this.des = '';
+            this.pre = '';
+            this.img = '';
+            this.cat = '';
         }
     }
 
