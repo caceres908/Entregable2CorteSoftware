@@ -1,7 +1,7 @@
 url = 'http://ec2-34-232-92-62.compute-1.amazonaws.com:5000';
 
 var pro = []
-var arete = []
+var arete = {}
 
 var app = new Vue({
     el: '#app',
