@@ -388,14 +388,15 @@ tbody tr td a:hover{
 #ab{
     background-color: white;
 }
-#cartas{
-margin-left: 50px;
-}
+
 
 .d1{
     display: table-cell;
 }
 #individual{
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
+}
+#conjunto{
+    text-align: center;
 }

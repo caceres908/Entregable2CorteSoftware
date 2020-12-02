@@ -27,7 +27,7 @@ var app = new Vue({
                 .then(response => {
                     this.producto = response.data.results;
                     console.log('Get list Products', this.producto);
-                    document.getElementById('caja1').innerHTML = "<div>" + "Nombre: "
+                    document.getElementById('caja1').innerHTML = "<div id='conjunto'>" + "Nombre: "
                         + this.producto.Nombre + "<br>" + "Descripcion: " + this.producto.Descripcion + "<br>" +
                         "<img id='Individual' src= '" + this.producto.Imagen + "'>" + "<br>" + "Precio: " + this.producto.Precio +
                         "</div>";
