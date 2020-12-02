@@ -29,7 +29,7 @@ var app = new Vue({
                     console.log('Get list Products', this.producto);
                     document.getElementById('caja1').innerHTML = "<div>" + "Nombre: "
                         + this.producto.Nombre + "<br>" + "Descripcion: " + this.producto.Descripcion + "<br>" +
-                        "<img src= '" + this.producto.Imagen + "'>" + "<br>" + "Precio: " + this.producto.Precio +
+                        "<img id='Individual' src= '" + this.producto.Imagen + "'>" + "<br>" + "Precio: " + this.producto.Precio +
                         "</div>";
                 })
                 .catch(error => console.error(error));
