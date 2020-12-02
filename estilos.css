@@ -126,7 +126,7 @@ h1 :hover{
     color: rgb(187, 167, 54);
 }
 #box4{
-    display:block;
+    display:table;
     color: rgb(255, 255, 255);
     margin-left: auto;
     margin-right: auto;
@@ -390,4 +390,8 @@ tbody tr td a:hover{
 }
 #cartas{
 margin-left: 50px;
+}
+
+.d1{
+    display: table-cell;
 }
