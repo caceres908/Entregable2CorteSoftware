@@ -134,29 +134,31 @@
         </div>
         <h2 id="pregal"></h2>
         <div id="box4">
-            <div class="ui special cards d1" v-for='u in productos'>
-                <div class="card">
-                    <div class="blurring dimmable image">
-                        <div class="ui dimmer">
-                            <div class="content">
-                                <div class="center">
-                                    <div class="ui inverted button">Ver Producto</div>
+            <div id="app">
+                <div class="ui special cards d1" v-for='u in productos'>
+                    <div class="card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">Ver Producto</div>
+                                    </div>
                                 </div>
                             </div>
+                            <img :src="u.Imagen" v-on:click="arete_unico(u)">
                         </div>
-                        <img :src="u.Imagen" v-on:click="arete_unico(u)">
-                    </div>
-                    <div class="content">
-                        <a class="header">{{u.Nombre}}</a>
-                        <div class="meta" id="ab">
-                            <span class="date" id="ab">{{u.Descripcion}}</span>
+                        <div class="content">
+                            <a class="header">{{u.Nombre}}</a>
+                            <div class="meta" id="ab">
+                                <span class="date" id="ab">{{u.Descripcion}}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="dollar sign icon" id="ab"></i>
-                            {{u.Precio}}
-                        </a>
+                        <div class="extra content">
+                            <a>
+                                <i class="dollar sign icon" id="ab"></i>
+                                {{u.Precio}}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
