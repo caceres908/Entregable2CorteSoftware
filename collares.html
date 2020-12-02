@@ -19,9 +19,7 @@
 
     <div id="box1">
         <input type="checkbox" id="btn-menu">
-        <label for="btn-menu" id="logomenu"><img id="logomenu"
-                src="img/menu.png"
-                width="25px" height="25px"></label>
+        <label for="btn-menu" id="logomenu"><img id="logomenu" src="img/menu.png" width="25px" height="25px"></label>
         <nav class="menu">
             <ul>
                 <li id=inciso><a href="index.html">Inicio</a></li>
@@ -114,7 +112,7 @@
                 </div>
             </div>
         </nav>
-        <script src="js/search.js"></script>
+        <!--<script src="js/search.js"></script> -->
         <div id="box3">
             <ul id="menu1">
                 <a id="icono" href="Carrito.html"><img id="icono" src="https://www.gameblackmarket.com/images/cart.png"
@@ -133,80 +131,97 @@
     </div>
     <h2 id="pregal"></h2>
     <div id="box4">
-        <p id="box5">
-
-            <a id="fotos1" href="collar1.html"><img id="fotos" src="img/collar1.png" alt="hilorojo" width="300px"
-                    height="300px"></a>
-            <a id="fotos1" href="collar4.html"><img id="fotos" src="img/collar4.png" alt="Collar estrella"
-                    width="300px" height="300px"></a>
-            <a id="fotos1" href="collar3.html"><img id="fotos" src="img/collar3.png" alt="aretes azules"
-                    width="300px" height="300px"></a>
-
-            <a id="fotos1" href="collar2.html"><img id="fotos" src="img/collar2.png" alt="aretes largos"
-                    width="300px" height="300px"></a>
-            <a id="fotos1" href="collar5.html"><img id="fotos" src="img/collar5.png" alt="varios aretes"
-                    width="300px" height="300px"></a>
-            <a id="fotos1" href="collar6.html"><img id="fotos" src="img/collar6.png" alt="topos" width="300px"
-                    height="300px"></a>
-        </p>
-        <br /><br /><br /><br /><br /><br /><br />
+        <div id="app">
+            <p id="box5">
+                <div class="ui special cards" v-for='u in productos'>
+                    <div class="card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <div class="ui inverted button">Ver Producto</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img :src="u.Imagen" v-on:click="arete_unico(u)">
+                        </div>
+                        <div class="content">
+                            <a class="header">{{u.Nombre}}</a>
+                            <div class="meta">
+                                <span class="date">{{u.Descripcion}}</span>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a>
+                                <i class="dollar sign icon"></i>
+                                {{u.Precio}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </p>
+            <br /><br /><br /><br /><br /><br /><br />
+        </div>
     </div>
-    <footer >
-       
+    <script src="js/collares.js"></script>
+    <footer>
+
         <div class="container-footer-all">
-         
-             <div  class="container-body">
- 
-                 
- 
-                 <div class="colum2">
- 
-                     <h1>Redes Sociales</h1>
- 
-                     <div class="row">
-                        <a id="p" href="https://www.facebook.com/flee.accesorios"><img src="img/facebook1.png" width= "15px" height= "25px"></a>
-                         <label>Siguenos en Facebook</label>
-                     </div>
-                     <div class="row">
-                        <a id="p" href="https://www.instagram.com/flee.bog/?igshid=1pa7ong3ph40d"><img src="img/instagram.png" width= "24px" height= "25px"></a>
-                         <label>Siguenos en Instagram</label>
-                     </div>
- 
- 
-                 </div>
- 
-                 <div class="colum3">
- 
-                     <h1>Informacion Contactos</h1>
- 
-                     <div class="row2">
-                         <img src="img/telefono.png" width= "25px" height= "25px">
-                         <label>+57-3016468043</label>
-                     </div>
- 
-                     <div  class="row2">
-                          <img src="img/correo.png" width= "30px" height= "22px">
-                          <label>flee.bogota@gmail.com</label>
-                     </div>
- 
-                 </div>
- 
-             </div>
-         
-         </div>
-         
-         <div class="container-footer">
-                <div class="footer">
-                     <div class="copyright">
-                         © 2020 Todos los Derechos Reservados | <a id="p" href="">Flee</a>
-                     </div>
- 
-                     
-                 </div>
- 
-             </div>
-         
-     </footer>
+
+            <div class="container-body">
+
+
+
+                <div class="colum2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+                        <a id="p" href="https://www.facebook.com/flee.accesorios"><img src="img/facebook1.png"
+                                width="15px" height="25px"></a>
+                        <label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <a id="p" href="https://www.instagram.com/flee.bog/?igshid=1pa7ong3ph40d"><img
+                                src="img/instagram.png" width="24px" height="25px"></a>
+                        <label>Siguenos en Instagram</label>
+                    </div>
+
+
+                </div>
+
+                <div class="colum3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="row2">
+                        <img src="img/telefono.png" width="25px" height="25px">
+                        <label>+57-3016468043</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="img/correo.png" width="30px" height="22px">
+                        <label>flee.bogota@gmail.com</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2020 Todos los Derechos Reservados | <a id="p" href="">Flee</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
 </body>
 
 
