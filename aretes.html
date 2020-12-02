@@ -133,39 +133,42 @@
             <img src="img/aretes.png" alt="Collarbone" width="100%">
 
         </div>
+
         <h2 id="pregal"></h2>
         <div id="box4">
             <div id="app">
                 <p id="box5">
                     <!-- <a id="fotos1" href="aretes1.html"><img id="fotos" src="img/aretes1.png" alt="hilorojo" width="300px"
                         height="300px"></a> -->
-                <div class="ui special cards" v-for='u in productos'>
-                    <div class="card">
-                        <div class="blurring dimmable image">
-                            <div class="ui dimmer">
+
+                        <div id="cartas" class="ui special cards" v-for='u in productos'>
+                            <div class="card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <div class="ui inverted button">Ver Producto</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img :src="u.Imagen" v-on:click="arete_unico(u)">
+                                </div>
                                 <div class="content">
-                                    <div class="center">
-                                        <div class="ui inverted button">Ver Producto</div>
+                                    <a class="header">{{u.Nombre}}</a>
+                                    <div id="ab" class="meta">
+                                        <span id="ab" class="date">{{u.Descripcion}}</span>
                                     </div>
                                 </div>
+                                <div class="extra content">
+                                    <a>
+                                        <i id="ab" class="dollar sign icon"></i>
+                                        {{u.Precio}}
+                                    </a>
+                                </div>
                             </div>
-                            <img :src="u.Imagen" v-on:click="arete_unico(u)">
                         </div>
-                        <div class="content">
-                            <a class="header">{{u.Nombre}}</a>
-                            <div class="meta">
-                                <span class="date">{{u.Descripcion}}</span>
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <a>
-                                <i class="dollar sign icon"></i>
-                                {{u.Precio}}
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
+            
             </p>
             <br /><br /><br /><br /><br /><br /><br />
         </div>
