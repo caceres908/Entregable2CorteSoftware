@@ -126,7 +126,7 @@ h1 :hover{
     color: rgb(187, 167, 54);
 }
 #box4{
-    display:table;
+    display:block;
     color: rgb(255, 255, 255);
     margin-left: auto;
     margin-right: auto;
@@ -386,6 +386,3 @@ tbody tr td a:hover{
     margin-left: 70%;
 }
 
-.d1{
-    display: table-cell;
-}
